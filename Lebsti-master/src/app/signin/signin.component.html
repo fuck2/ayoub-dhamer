@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+  <section class="hero is-primary is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-5-tablet is-4-desktop is-3-widescreen has-shadow">
+              <form #form="ngForm" autocomplete="off"  name="aa" id="myform" class="box">
+                <div class="field">
+                  <label for="" class="label">Email</label>
+                  <div class="control has-icons-left">
+                      <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required name="login" #login="ngModel" [(ngModel)]="service.formData2.mail">
+
+                      <!-- <input  required matInput placeholder="Email" id="first_name" type="email"  name="login" #login="ngModel" [(ngModel)]="service.formData2.mail" > -->
+            
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="" class="label">Password</label>
+                  <div class="control has-icons-left">
+                      <input type="password" placeholder="*******" class="input validate" required id="password" name="passe" #passe="ngModel" [(ngModel)]="service.formData2.passe">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+                
+                <div class="field">
+                    <button class="button is-fullwidth" type="button" name="action" (click)="onLogin(form)"  [disabled]="form.form.invalid"   >
+                        Connexion
+                         </button>
+                </div>
+                <div *ngIf="!LoginTest; else loggedOut" class="toast-body">
+                
+                    <!-- <mat-error class="is-centered">   Veuillez Verifier Les informations de Connexion.</mat-error> -->
+ 
+         </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

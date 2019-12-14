@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Varela+Round&display=swap');
+$primaryfont:"Montserrat";
+$secondaryfont:"Varela Round";
+$primarycolor:#4A1E9E;
+
+.is-fluid{
+  background-image: url('../../assets/memphis-mini.png');
+}
+
+.columns{
+  height: 100vh;
+}
+
+.col1{
+  background-image: linear-gradient(to bottom right,whitesmoke, #F7E1D7);
+}
+
+.col2{
+  background-image: linear-gradient(to bottom right, whitesmoke, #9BC1BC);
+}
+
+.col3{
+  background-image: linear-gradient(to bottom right, whitesmoke, sandybrown);
+}
+
+.welcomeImg{
+  width: 100vw;
+}
+
+img{
+  width: 40vw;
+}
+
+.title{
+  font-size: 8vh;
+}
+
+.subtitle{
+  font-size: 4vh;
+}
+
+.btnBoutique, .btnCommander{
+  background-color:#2A3D45 ;
+  color: white;
+}
+
+
+

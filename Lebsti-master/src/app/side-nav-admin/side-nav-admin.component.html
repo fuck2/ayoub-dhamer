@@ -1,0 +1,80 @@
+<section class="main-content columns is-fullheight">
+
+  <aside class="column is-2 is-narrow-mobile is-fullheight section" style="width:270px ;">
+    <p class="menu-label is-hidden-touch">Navigation</p>
+    <ul class="menu-list">
+      <li>
+        <a  [routerLink]="['']" routerLinkActive="router-link-active" >
+          <span class="icon"><i class="fas fa-lg"></i></span> Home
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active" class="">
+          <span class="icon"><i class="fas fa-lg"></i></span> Modifier Votre Profil
+        </a>
+      </li>
+      <li>
+        <a  class="is-active">
+          <span class="icon"><i class="fa fa-table"></i></span> Modele
+        </a>
+
+        <ul>
+          <li>
+            <a [routerLink]="['/dashboard/ListeModele']" routerLinkActive="router-link-active">
+              <span class="icon is-small"><i class="fa fa-link"></i></span> Liste Des Modeles
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon is-small"><i class="fa fa-link"></i></span>  Ajout Des Modeles
+            </a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li>
+        <a  class="is-active">
+          <span class="icon"><i class="fa fa-table"></i></span> Client
+        </a>
+
+        <ul>
+          <li>
+            <a [routerLink]="['/Admindashboard/ListeClient']" routerLinkActive="router-link-active">
+              <span class="icon is-small"><i class="fa fa-link"></i></span> Liste Des Clients
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon is-small"><i class="fa fa-link"></i></span>  Ajout Des Clients
+            </a>
+          </li>
+        </ul>
+      </li>
+
+
+      <li>
+          <a  class="is-active">
+            <span class="icon"><i class="fa fa-table"></i></span> Couturier
+          </a>
+
+          <ul>
+            <li>
+              <a [routerLink]="['/dashboard/ListeCouturier']" routerLinkActive="router-link-active">
+                <span class="icon is-small"><i class="fa fa-link"></i></span> Liste Des Couturier
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon is-small"><i class="fa fa-link"></i></span>  Ajout Des Couturiers
+              </a>
+            </li>
+          </ul>
+        </li>
+
+    </ul>
+  </aside>
+
+
+
+</section>

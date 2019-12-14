@@ -1,0 +1,297 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+<section *ngIf="isCouterier">
+
+
+
+      <app-side-nav></app-side-nav>
+
+
+
+ 
+
+      <section id="contents">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <i class="fa fa-align-right"></i>
+              </button>
+              <a class="navbar-brand" href="#">my<span class="main-color">Dashboard</span></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
+                    <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
+                <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
+                <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="welcome">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="content">
+                  <h2 style="color: white;">Welcome to your Dashboard</h2>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <section class='statis text-center'>
+
+          <div class="container">
+              <form>
+                <h2>Mettre à jour votre profil</h2>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="first">Email</label>
+                      <input type="text" class="form-control" placeholder="" id="first" type="email" >
+                    </div>
+                  </div>
+                  <!--  col-md-6   -->
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="passe">Nouveau mot de passe</label>
+                      <input type="password" class="form-control" placeholder="" id="passe">
+                    </div>
+                  </div>
+                  <!--  col-md-6   -->
+                </div>
+
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="tel">Numero Tel</label>
+                      <input type="text" class="form-control" placeholder="" id="tel">
+
+                    </div>
+
+
+                  </div>
+                  <!--  col-md-6   -->
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label for="Ancienpasse">Ancien mot de passe</label>
+                      <input type="password" class="form-control" id="Ancienpasse" placeholder="">
+                    </div>
+                  </div>
+                  <!--  col-md-6   -->
+                </div>
+                <!--  row   -->
+
+
+                <div class="row">
+
+                  <!--  col-md-6   -->
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleFormControlFile1">Image du Profil</label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+
+                  </div>
+                  <!--  col-md-6   -->
+                </div>
+                <!--  row   -->
+
+
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+      </section>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+      </section>
+      <section *ngIf="isClient">
+
+      <app-side-nav></app-side-nav>
+
+
+
+
+      <section id="contents">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <i class="fa fa-align-right"></i>
+              </button>
+              <a class="navbar-brand" href="#">my<span class="main-color">Dashboard</span></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
+                    <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
+                <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
+                <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="welcome">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="content">
+                  <h2 style="color: white;">Welcome to your Dashboard</h2>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class='statis text-center'>
+
+            <div class="container">
+                <form>
+                  <h2>Mettre à jour votre profil</h2>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="first">Email</label>
+                        <input type="text" class="form-control" placeholder="" id="first" type="email">
+                      </div>
+                    </div>
+                    <!--  col-md-6   -->
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="passe">Nouveau mot de passe</label>
+                        <input type="password" class="form-control" placeholder="" id="passe">
+                      </div>
+                    </div>
+                    <!--  col-md-6   -->
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="tel">Numero Tel</label>
+                        <input type="text" class="form-control" placeholder="" id="tel">
+
+                      </div>
+
+
+                    </div>
+                    <!--  col-md-6   -->
+
+                    <div class="col-md-6">
+
+                      <div class="form-group">
+                        <label for="Ancienpasse">Ancien mot de passe</label>
+                        <input type="password" class="form-control" id="Ancienpasse" placeholder="">
+                      </div>
+                    </div>
+                    <!--  col-md-6   -->
+                  </div>
+                  <!--  row   -->
+
+
+                  <div class="row">
+                    <div class="col-md-6">
+
+                      <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="email">
+                      </div>
+                    </div>
+                    <!--  col-md-6   -->
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="exampleFormControlFile1">Image du Profil</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                      </div>
+
+                    </div>
+                    <!--  col-md-6   -->
+                  </div>
+                  <!--  row   -->
+
+
+
+
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+        </section>
+
+
+
+      </body>
+      </html>

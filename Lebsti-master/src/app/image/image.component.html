@@ -1,0 +1,5 @@
+<input type="file" (change)="onDrop($event.target.files)">
+
+<div *ngFor="let file of files">
+  <upload-task [file]="file"></upload-task>
+</div>

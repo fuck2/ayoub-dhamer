@@ -1,0 +1,137 @@
+<section *ngIf="isCouterier ;else admin0">
+  <aside class="side-nav" id="show-side-navigation1">
+    <i class="fa fa-bars close-aside hidden-sm hidden-md hidden-lg" data-close="show-side-navigation1"></i>
+    <div class="heading">
+      <img
+        src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+        alt="">
+      <div class="info">
+        <h3><a href="#">{{UserObject.prenom+" "}}{{UserObject.username}}</a></h3>
+        <p>{{UserType}}</p>
+      </div>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Type here"><i class="fa fa-search"></i>
+    </div>
+    <ul class="categories">
+      <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a [routerLink]="['']"
+          routerLinkActive="router-link-active"> Acceuil</a>
+
+      </li>
+
+
+      <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a [routerLink]="['/dashboard']"
+          routerLinkActive="router-link-active"> Dashboard</a>
+
+      </li>
+
+      <li><i class="fa fa-wrench fa-fw"></i><a routerLink="/EditerProfil" routerLinkActive="router-link-active"> Mise a
+          jour De Votre Profil</a>
+
+      </li>
+
+
+
+      <li><i class="fa fa-envelope fa-fw"></i><a routerLink="/Commande" routerLinkActive="router-link-active"> Listes des Commandes Personnaliseés
+  </a>
+
+      </li>
+      <li><i class="fa fa-users fa-fw"></i><a href="#"> Contact us</a>
+        <ul class="side-nav-dropdown">
+          <li><a href="#">Lorem ipsum</a></li>
+          <li><a href="#">ipsum dolor</a></li>
+          <li><a href="#">dolor ipsum</a></li>
+          <li><a href="#">amet consectetur</a></li>
+          <li><a href="#">ipsum dolor sit</a></li>
+        </ul>
+      </li>
+
+      <li><i class="fa fa-envelope fa-fw"></i><a> Déconnexion</a>
+    </ul>
+  </aside>
+</section>
+<ng-template #admin0>
+  <section *ngIf="isClient; else admin1">
+    <aside class="side-nav " id="show-side-navigation1">
+      <i class="fa fa-bars close-aside hidden-sm hidden-md hidden-lg" data-close="show-side-navigation1"></i>
+      <div class="heading">
+        <img
+          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+          alt="">
+        <div class="info">
+          <h3><a href="#">{{UserObject.prenom+" "}}{{UserObject.username}}</a></h3>
+          <p>{{UserType}}</p>
+        </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Type here"><i class="fa fa-search"></i>
+      </div>
+      <ul class="categories">
+
+        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a [routerLink]="['']"
+            routerLinkActive="router-link-active"> Acceuil</a>
+
+        </li>
+
+        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a [routerLink]="['/dashboard']"
+            routerLinkActive="router-link-active"> Dashboard</a>
+
+        </li>
+
+        <li><i class="fa fa-wrench fa-fw"></i><a routerLink="/EditerProfil"> Mise a jour De Votre Profil</a>
+
+        </li>
+        <li><i class="fa fa-wrench fa-fw"></i><a routerLink="/ModelePersonnalise">Modele Personnalise</a>
+
+        </li>
+
+        <li><i class="fa fa-users fa-fw"></i><a href="#"> Contact us</a>
+
+        </li>
+
+
+      </ul>
+    </aside>
+    <router-outlet></router-outlet>
+  </section>
+</ng-template>
+
+<ng-template #admin1>
+  <section>
+    <aside class="side-nav " id="show-side-navigation1">
+      <i class="fa fa-bars close-aside hidden-sm hidden-md hidden-lg" data-close="show-side-navigation1"></i>
+      <div class="heading">
+        <img
+          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+          alt="">
+        <div class="info">
+          <h3><a href="#">{{UserObject.prenom+" "}}{{UserObject.username}}</a></h3>
+          <p>{{UserType}}</p>
+        </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Type here"><i class="fa fa-search"></i>
+      </div>
+      <ul class="categories">
+
+        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a [routerLink]="['']"
+            routerLinkActive="router-link-active"> Acceuil</a>
+
+        </li>
+
+        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a [routerLink]="['/Admindashboard']"
+            routerLinkActive="router-link-active"> Dashboard</a>
+
+        </li>
+
+        <li><i class="fa fa-users fa-fw"></i><a [routerLink]="['/ListeUsers']" routerLinkActive="router-link-active">
+            Liste des Clients / Couturiers</a>
+
+        </li>
+
+
+      </ul>
+    </aside>
+    <router-outlet></router-outlet>
+  </section>
+</ng-template>

@@ -1,0 +1,149 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <app-side-nav></app-side-nav>
+
+
+
+  <section id="contents">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <i class="fa fa-align-right"></i>
+          </button>
+          <a class="navbar-brand" href="#">my<span class="main-color">Dashboard</span></a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">My profile <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
+                <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
+            <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
+            <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="welcome">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="content">
+              <h2 style="color: white;">Welcome to your Dashboard</h2>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class='statis text-center'>
+
+      <div class="container">
+        <form #form="ngForm" autocomplete="off" name="aa" id="myform" (submit)="onSubmit(form)">
+          <h2>Ajouter un nouveau Modele</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="first">Description</label>
+                <input type="text" class="form-control" placeholder="description" name="description" id="description"
+                  type="text" #description="ngModel" [(ngModel)]="service.formData2.description">
+              </div>
+            </div>
+            <!--  col-md-6   -->
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="passe">categorie</label>
+                <select class="browser-default custom-select" style="color: black;" id="categorie" name="categorie"
+                  #categorie="ngModel" [(ngModel)]="service.formData2.categorie">
+                  <option value="" selected>Choisir une catégorie</option>
+                  <option *ngFor="let item of list" [value]="item.NomCat">
+
+                    {{item.NomCat}}
+                  </option>
+                </select>
+
+              </div>
+            </div>
+            <!--  col-md-6   -->
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="tel">Prix</label>
+                <input type="text" class="form-control" placeholder="Prix" id="prix" #prix="ngModel" name="prix"
+                  [(ngModel)]="service.formData2.prix">
+
+              </div>
+
+
+            </div>
+            <!--  col-md-6   -->
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <label for="exampleFormControlFile1">Image du Profil</label>
+                <app-image></app-image>
+              </div>
+            </div>
+            <!--  col-md-6   -->
+          </div>
+          <!--  row   -->
+
+
+
+          <!--  row   -->
+
+
+
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+</body>
+
+</html>

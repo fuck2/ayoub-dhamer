@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Varela+Round&display=swap');
+$primaryfont:"Montserrat";
+
+.navbar{
+  background-color: #2A3D45;
+}
+
+#SiteName{
+  font-family: $primaryfont;
+  font-size: 24px;
+  margin-left: 8px;
+  color: #DDC9B4;
+}
+
+.is-primary{
+  background-color: #DDC9B4;
+}
+
+.is-primary:hover{
+  color : #2A3D45;
+  background-color: whitesmoke;
+}
+
+.navbar-brand .navbar-item:hover{
+  color: #2A3D45;
+  font-weight: bold;
+}
+

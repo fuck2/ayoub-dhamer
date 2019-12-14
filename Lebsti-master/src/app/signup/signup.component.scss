@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Varela+Round&display=swap');
+$primaryfont:"Montserrat";
+$secondaryfont:"Varela Round";
+$primarycolor:#4A1E9E;
+
+
+.container{
+  margin-top: 12vh;
+}
+
+.button{
+  border-radius: 0;
+  font-family: $primaryfont;
+  background:$primarycolor;
+  color: white;
+
+}
+img{
+  height: 70vh;
+}
+@media screen and( max-width:768px){
+  img{
+   display: none;
+  }
+}

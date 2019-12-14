@@ -1,0 +1,131 @@
+<app-nav></app-nav>
+<div class="container">
+
+
+<h1 class="subtitle">Inscription</h1>
+<div class=" columns ">
+
+
+    <div class=" column   is-5 ">
+
+      <!---->
+      <form [formGroup]="reactiveForm"    autocomplete="off" (submit)="onSubmit(form)" name="aa" id="myform">
+<div class="columns">
+          <div  class="form-group column is-half ">
+        <mat-form-field class=" column   ">
+          <input   matInput placeholder="Nom"  [(ngModel)]="service.formData.nom"   required id="nom" formControlName="username">
+
+            <mat-error *ngIf="reactiveForm.get('username').errors?.required">Le nom est obligatoire</mat-error>
+
+        </mat-form-field>
+
+        </div>
+
+        <div   class="form-group column   is-half ">
+        <mat-form-field class=" column   ">
+          <input  matInput placeholder="Prénom"   [(ngModel)]="service.formData.prenom"  formControlName="prenom" required>
+          <mat-error *ngIf="reactiveForm.get('prenom').errors?.required">Le prenom est obligatoire</mat-error>
+
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="columns">
+        <div   class="form-group column   is-half">
+        <mat-form-field class=" column">
+          <input  matInput placeholder="Cin" maxlength="8"  [(ngModel)]="service.formData.cin"    formControlName="cin" required>
+          <mat-error *ngIf="reactiveForm.get('cin').errors?.required">Le cin est obligatoire</mat-error>
+
+          <mat-hint>Must be 8 Numbers long.</mat-hint>
+
+        </mat-form-field>
+      </div>
+
+      <div   class="form-group column   is-half">
+        <mat-form-field class=" column ">
+          <input matInput placeholder="Email" required  email="true"    [(ngModel)]="service.formData.mail"  formControlName="mail" id="mail" >
+          <mat-error *ngIf="reactiveForm.get('mail').errors?.required||reactiveForm.get('mail').errors?.email">Veuillez Verifier l'email</mat-error>
+
+
+
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="columns">
+        <div  class="form-group column   is-half">
+        <mat-form-field class=" column">
+          <input matInput placeholder="Username"   [(ngModel)]="service.formData.login"   formControlName="login" required>
+          <mat-error *ngIf="reactiveForm.get('login').errors?.required">Le login est obligatoire</mat-error>
+
+        </mat-form-field>
+        </div>
+
+        <div   class="form-group column   is-half">
+        <mat-form-field>
+          <input matInput placeholder="Adresse" [(ngModel)]="service.formData.adresse"  formControlName="adresse" required>
+          <mat-error *ngIf="reactiveForm.get('adresse').errors?.required">L'adresse est obligatoire</mat-error>
+
+        </mat-form-field>
+        </div>
+      </div>
+      <div class="columns">
+        <div   class="form-group column   is-half">
+
+          <mat-form-field>
+            <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [(ngModel)]="service.formData.passe" required formControlName="passe" >
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-error *ngIf="reactiveForm.get('passe').errors?.required">Mot de passe est obligatoire</mat-error>
+            <mat-hint>Must be 6 Characters long...</mat-hint>
+
+          </mat-form-field>
+        </div>
+
+        <div  class="form-group column   is-half" >
+        <mat-form-field>
+          <input ValidateEqualTo matInput placeholder="Confirmation Mot De Passe" type="password"  required formControlName="confirm"  >
+
+        </mat-form-field>
+        <mat-error class="invalid-feedback" *ngIf="reactiveForm.errors?.mismatch && (reactiveForm.controls['confirm'].dirty || reactiveForm.controls['confirm'].touched)">
+            Passwords don't match.
+        </mat-error>
+        </div>
+      </div>
+<div class="columns">
+        <div   class="form-group column is-half">
+          <mat-form-field>
+            <mat-label>Gouvernerat</mat-label>
+            <mat-select  (selectionChange)="onChange(service.formData.ville)" id="gouvernerat_choix" [(ngModel)]="service.formData.ville"  formControlName="ville">
+              <mat-option *ngFor="let gouvernerat of gouvernerats" [value]="gouvernerat.value">
+                {{gouvernerat.viewValue}}
+              </mat-option>
+            </mat-select>
+
+          </mat-form-field>
+
+        </div>
+
+        <div  class="form-group column is-half-desktop ">
+
+            <mat-form-field>
+              <mat-label>Ville</mat-label>
+              <mat-select id="ville_choix"  [(ngModel)]="service.formData.gouvernerat"   formControlName="gouvernerat">
+                <mat-option *ngFor="let ville of villespec" [value]="ville.villeSpec">
+                  {{ville.villeSpec}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          </div>
+          <button id="signup" type="submit" [disabled]="reactiveForm.invalid" class="button">Inscrire</button>
+
+        </form>
+
+         <!---->
+      </div>
+
+
+    <div class="column   is-half  has-text-centered">
+  <img src="../../assets/signup.svg" alt="">
+
+    </div>
+  </div>
+  </div>
